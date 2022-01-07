@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Fundamentos JavaScript - Strings</h1>
+        <script>
+            let nombre = 'Sarahi';
+            let apellido = 'Vazquez';
+
+            //Cadena de texto con su constructor
+            let saludo = new String('Hola mundo');
+            console.log(nombre,apellido,saludo);
+
+            //Propiedad length, la longitud de la cadena
+            console.log(nombre.length,apellido.length,saludo.length);
+
+            //TODOS LOS CARACTERES EN MAYUSCULA
+            console.log(nombre.toUpperCase());
+
+            //Todos los caracteres en minucula
+            console.log(apellido.toLowerCase());
+
+            console.log(saludo.includes("mundo"));
+
+            //Quita los espacios alrededor del texto
+            saludo.trim(); 
+
+            //Separa cada palabra de la cadena
+            console.log(saludo.split(" "));
+
+    
+        </script>
+    </body>
+</html>
