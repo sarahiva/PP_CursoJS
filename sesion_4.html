@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Fundamentos JavaScript - Constantes</h1>
+        <script>
+            //Usamos la palabra reservada const para variables que no
+            //van a cambiar su valor
+            /*
+            ** Las constantes no pueden estar vacias
+            ** No es posible cambiar los valores de las contantes primitivas
+                es posible para los compuestos: objetos, arreglos, etc.
+            */
+            //Valores primitivos
+            const PI = 3.1416;
+            //PI = 3.15;
+            console.log(PI);
+
+            //Valores compuestos
+            const objeto = {
+                nombre: "Sara",
+                edad: 22
+            }
+
+            const colores = ["blanco","negro","azul"];
+
+            console.log(objeto);
+            console.log(colores);
+
+            objeto.correo = "sara011.svz@gmail.com";
+            colores.push("anaranjado");
+
+            console.log(objeto);
+            console.log(colores);
+        </script>
+    </body>
+</html>
