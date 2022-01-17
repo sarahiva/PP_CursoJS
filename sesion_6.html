@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Fundamentos JavaScript - Template Strings</h1>
+        
+        <script>
+        //Concatenación
+        let nombre ='Sara';
+        let apellido = 'Vazquez';
+        let saludo = 'Hola mi nombre es ' + nombre + ' ' + apellido + '.';
+        console.log(saludo);
+
+        //Interpolación de variables
+        //Meter dentro de una cadena de texto el valor dinamicamente de una variable
+        let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
+        console.log(saludo2);
+        
+        let ul = "<ul><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
+        console.log(ul);
+
+        let ul2 = `
+        <ul>
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>`;
+        console.log(ul2);
+
+        let ul3 = '<ul>';
+        ul3 += '<li>Primavera</li>';
+        ul3 += '<li>Verano</li>';
+        ul3 += '<li>Otoño</li>';
+        ul3 += '<li>Invierno</li>';
+        ul3 += '</ul>';
+            
+        console.log(ul3);
+
+        </script>
+    </body>
+</html>
