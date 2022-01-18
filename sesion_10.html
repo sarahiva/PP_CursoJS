@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Valores compuestos - Funciones</h1>
+        <script>
+            //Funciones declaradas
+            function estoEsUnaFuncion(){
+                console.log('Uno');
+                console.log('Dos');
+                console.log('Tres');
+            }
+
+            function unaFuncionQueDevuelveValor(){
+                console.log('Uno');
+                return 19;
+                console.log('Dos');
+                console.log('Tres');
+                return 'La funcion ha retornado una Cadena de texto';
+            }
+
+            //Podemos asignar valores por defecto a los parametros de una funcion
+            function saludar(nombre = 'Desconocido',edad = 0){
+                console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+            }
+
+            //Invocación de funciones
+            //estoEsUnaFuncion();
+            //let valorDeFuncion = unaFuncionQueDevuelveValor();
+            //console.log(valorDeFuncion);
+            //saludar('Sarah',22);
+            //saludar();
+            
+            //funcionDeclarada();
+            //
+            function funcionDeclarada(){
+                console.log('Esto es una funcion declarada y puede invocarse en culquier parte de nuestro codigo, incluso antes de que la funcion se declarada');
+            }
+
+            //funcionExpresada();
+            //Función anónima
+            const funcionExpresada = function(){
+                console.log(`Esto es una funcion expresada, es decir, una función 
+                que se le ha asignado como valor a una variable, si invocamos 
+                esta funcion antes de su definición JS nos dirá...`)
+            }
+
+            funcionExpresada();
+
+
+
+        </script>
+    </body>
+</html>
