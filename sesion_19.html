@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Objetos literales</h1>
+        <script>
+            //Una nueva forma de escribir atributos y metodos
+            let nombre = 'Hunter',
+                edad = 4;
+
+            const perro = {
+                nombre: nombre,
+                edad: edad,
+                ladrar: function(){
+                    console.log('guaauuu');
+                }
+            }
+
+            console.log(perro);
+
+            const dog = {
+                nombre,
+                edad,
+                raza: 'Pitbull',
+                ladrar(){
+                    console.log('guaauuu  guaauuu');
+                }
+            }
+
+            console.log(dog);
+            dog.ladrar();
+
+        </script>
+    </body>
+</html>

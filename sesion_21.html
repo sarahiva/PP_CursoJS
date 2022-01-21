@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Arrow Functions</h1>
+        <script>
+            /*Nueva forma de definir funciones anonimas*/
+            
+            //Funcion anonima 
+            /*const saldar = function(){
+                console.log('Hola');
+            }*/
+
+            //Arrow function
+            /*const saldar = () => {
+                console.log('Hola');
+            }*/
+
+            //Si la funcion tiene una sola linea puede ser:
+            //const saldar = () => console.log('Hola');
+
+            /*const saldar = (nombre) => console.log(`Hola ${nombre}`);
+            saldar('Irma');*/
+
+            //Si la funcion solo recibe un parametro puede ser sin los ()
+            const saldar = nombre => console.log(`Hola ${nombre}`);
+            saldar('Irma');
+
+            /*const sumar = function(a,b){
+                return a+b;
+            }*/
+            //El return lo tiene implicito
+            const sumar = (a,b) => a+b;
+
+            console.log(sumar(9,9));
+
+            const numeros = [1,2,3,4,5];
+
+            numeros.forEach((el,index) => {
+                console.log(`El elemento ${el} esta en la posicion ${index}`);
+            });
+
+            /*Las arrow functions pueden capturar el objeto this del contexto en 
+            el que se encuentren*/
+
+            /*function Perro(){
+                console.log(this);
+            }
+
+            Perro();*/
+
+            //Contexto: window
+            const perro = {
+                nombre: 'Hunter',
+                ladrar: () => {
+                    console.log(this);
+                }
+            }
+
+            //Contexto: objeto mismo
+            const perro = {
+                nombre: 'Hunter',
+                ladrar: function(){
+                    console.log(this);
+                }
+            }
+
+            //Contexto: objeto mismo
+            const perro = {
+                nombre: 'Hunter',
+                ladrar(){
+                    console.log(this);
+                }
+            }
+
+            perro.ladrar();
+
+        </script>
+    </body>
+</html>
