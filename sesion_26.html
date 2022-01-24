@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Objeto console</h1>
+        <script>
+            console.log(console);
+            console.error('Esto es un error');
+            console.warn('Esto es un aviso');
+            console.info('Esto es un mensaje informativo');
+            console.clear();
+            console.log(window);
+            console.dir(window);
+            console.log(document);
+            console.dir(document);
+            console.clear();
+            console.group('Cursos de mircha en YT');
+            console.log('Curso JS');
+            console.log('Curso Node.js');
+            console.log('Curso PWAs');
+            console.log('Curso Flexbox');
+            console.groupEnd();
+            console.clear();
+            console.table(Object.entries(console).sort());
+
+            const numeros = [1,2,3,4,5],
+            vocales = ['a','e','i','o','u'];
+
+            console.table(numeros);
+            console.table(vocales);
+
+            const perro = {
+                nombre: 'Hunter',
+                raza: 'Pitbull',
+                color: 'cafe'
+            }
+            console.table(perro);
+            console.clear();
+            
+            let x = 1, y = 2, pruebaXY = 'Se espera que x siempre sea menor que y';
+
+            console.assert(x<y,x,y,pruebaXY);
+        </script>
+    </body>
+</html>

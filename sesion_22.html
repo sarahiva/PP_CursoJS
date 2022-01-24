@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Prototipos</h1>
+        <script>
+            /*POO
+            Clase - Modelo a seguir
+            Objetos - Es una instancia de una clase
+            */
+
+            //funcion constructora
+            /*function Animal (nombre,genero){
+                this.nombre = nombre;
+                this.genero = genero;
+
+                this.sonar = function(){
+                    console.log('Hago sonids porque estoy vivo');
+                }
+
+                this.saludar = function(){
+                    console.log(`Hola me llamo ${this.nombre}`);
+                }
+            }*/
+
+            //Funcion constructora donde asignamos los metodos al
+            //Prototipo, no a la funcion como tal
+            function Animal (nombre,genero){
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+
+            //Metodos agregados al prototipo de la funcion
+            //constructora
+            Animal.prototype.sonar = function(){
+                console.log('Hago sonids porque estoy vivo');
+            }
+
+            Animal.prototype.saludar = function(){
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+
+            const snoopy = new Animal('Snoopy','Macho'),
+            lolaBunny = new Animal('Lola Bunny','Hembra');
+
+            console.log(snoopy);
+            console.log(lolaBunny);
+
+            snoopy.sonar();
+            snoopy.saludar();
+
+            lolaBunny.sonar();
+            lolaBunny.saludar();
+
+
+        </script>
+    </body>
+</html>

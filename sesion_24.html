@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Clases y Herencia</h1>
+        <script>
+            class Animal{
+                constructor(nombre,genero){
+                    this.nombre = nombre;
+                    this.genero = genero;
+                }
+                
+                sonar(){
+                    console.log('Hago sonido porque estoy vivo');
+                }
+
+                saludar(){
+                    console.log(`Hola me llamo ${this.nombre}`);
+                }
+            }
+
+            //Herencia
+            class Perro extends Animal{
+                constructor(nombre,genero,tamanio){
+                    super(nombre,genero);
+                    this.tamanio = tamanio;
+                }
+
+                sonar(){
+                    console.log('Soy perro y mi sonido es un ladrido');
+                }
+
+                ladrar(){
+                    console.log('Guau Guau!!');
+                }
+            }
+
+            
+
+            const mimi = new Animal('Mimi','Hermbra'),
+            scooby = new Perro('Scooby','Macho','Gigante');
+
+            console.log(mimi);
+            mimi.sonar();
+            mimi.saludar();
+            console.log(scooby);
+            scooby.sonar();
+            scooby.saludar();
+            scooby.ladrar();
+
+        </script>
+    </body>
+</html>
