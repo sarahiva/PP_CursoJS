@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Objeto Date</h1>
+        <script>
+            //console.log(Date());
+            let fecha = new Date();
+            console.log(fecha);
+
+            //Dia del mes
+            console.log('Dia del mes ', fecha.getDate());
+            console.log('Dia de la semana ',fecha.getDay());
+            console.log('Mes del año', fecha.getMonth());
+            console.log('Año',fecha.getFullYear());
+            console.log('Hora', fecha.getHours(), fecha.getMinutes(),fecha.getSeconds());
+            console.log(fecha.toString());
+            console.log(fecha.toDateString());
+            console.log(fecha.toLocaleString());
+            console.log(fecha.toLocaleDateString());
+            console.log(fecha.toLocaleTimeString());
+            console.log(fecha.getTimezoneOffset());
+            //Hora del meridiano 0
+            console.log(fecha.getUTCDate());
+            console.log(fecha.getUTCHours());
+            ///////////////////////
+            console.log(Date.now());
+
+            let cumpleSara = new Date(1999,4,1);
+            console.log(cumpleSara);
+        </script>
+    </body>
+</html>

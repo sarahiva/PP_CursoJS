@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+    <body>
+        <h1>Expresiones regulares</h1>
+        <script>
+            let cadena = '65Lorem ipsum dolor sit amet consectetur adipiscing elit... doloremque';
+            //let expReg = new RegExp('lorem','ig');
+            //console.log(expReg.test(cadena)); //Si es valido o no
+            //console.log(expReg.exec(cadena)); //Arreglo con info
+
+            //let expReg2 = /\d/ig; //Si hay un numero
+            //let expReg2 = /[0-9]/ig; //Si hay un numero del rango []
+            let expReg2 = /lorem{2}/ig; //repeticion
+            console.log(expReg2.test(cadena)); 
+            console.log(expReg2.exec(cadena)); 
+        </script>
+    </body>
+</html>
