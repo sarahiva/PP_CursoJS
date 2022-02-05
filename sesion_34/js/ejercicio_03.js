@@ -13,3 +13,11 @@ export function dividirCadena(cadena,separador){
         'parametro debe ser una cadena de texto';
     }
 }
+
+//Solucion de Jon Mircha
+const cadenaAArreglo = (cadena = "",separador = undefined) => 
+    (!cadena)
+        ? console.warn('No ingresaste una cadena')
+        : (separador === undefined)
+            ? console.warn('No ingresaste el separador') 
+            : console.info(cadena.split(separador));

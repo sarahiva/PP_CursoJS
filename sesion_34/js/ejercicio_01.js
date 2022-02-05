@@ -16,3 +16,15 @@ export function numCaracteres(cadena){
         return 'NO es una cadena';
     }
 }
+
+//Solucion de Jon Mircha
+/*function contarCaracteres(cadena = ''){
+    if(!cadena){
+        console.warn('No ingresaste una cadena');
+    }else{
+        console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+    }
+}*/
+
+const contarCaracteres = (cadena = "") => (!cadena)? console.warn('No ingresaste una cadena') : console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+

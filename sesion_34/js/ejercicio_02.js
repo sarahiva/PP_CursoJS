@@ -22,3 +22,6 @@ export function textoRecortado(cadena,numCaracteres){
         'parametro debe ser una cadena de texto';
     }
 }
+
+//Solucion de Jon Mircha
+const recortarTexto = (cadena = "",longitud = "") => (!cadena) ? console.warn('No ingresaste una cadena') : (longitud === undefined) ? console.warn('No ingresaste la longitud para recortar el texto') : console.info(cadena.slice(0,longitud));
