@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Asinconia en JS</title>
+    </head>
+    <body>
+        <h1>Temporizadores (setTimeout & setInterval)</h1>
+        <script>
+            console.log('Inicio');
+            /*setTimeout(() =>{
+                console.log('Ejecutando un setTimeout, esto se ejecuta una sola vez');
+            },3000);
+
+            setInterval(() => {
+                console.log('Ejecutando un setInterval, esto se ejecuta indefinidamente cada cierto intervalo de tiempo');
+            },1000);*/
+
+            /*setInterval(() => {
+                console.log(new Date().toLocaleTimeString());
+            },1000);*/
+
+            /*let temporizador = setTimeout(() => {
+                console.log(new Date().toLocaleTimeString());
+            },1000);
+
+            //Para detener un setTimeout
+            clearTimeout(temporizador);*/
+
+            let temporizador = setInterval(() => {
+                console.log(new Date().toLocaleTimeString());
+            },1000);
+
+            //Para detener un setTimeout
+            clearInterval(temporizador);
+            console.log('Despues del clearInterval');
+        </script>
+    </body>
+</html>
