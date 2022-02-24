@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Nuevos Tipos</title>
+    </head>
+    <body>
+        <h1>Nuevos Tipos de Datos en JS</h1>
+        <h2>Maps</h2>
+        <script>
+            /*Maps - Son objetos que nos sirve para almacenar conjuntos de valores asociados
+            a manera de objeto*/
+
+            const mapa = new Map();
+
+            //Para agregar valores
+            mapa.set('nombre','Sara');
+            mapa.set('apellido','Vazquez');
+            mapa.set('edad',22);
+
+            console.log(mapa);
+            console.log(mapa.size);
+
+            //Para ver si existe una llave
+            console.log(mapa.has('correo'));
+            console.log(mapa.has('nombre'));
+
+            //Para obtener un valor
+            console.log(mapa.get('nombre'));
+
+            //Para sobreescribir un valor
+            mapa.set('nombre','SarahiVA');
+            console.log(mapa.get('nombre'));
+        
+            //Eliminar elementos
+            mapa.delete('apellido');
+            console.log(mapa);
+
+            //Para recorrer el mapa
+            for (let [key,value] of mapa) {
+                console.log(`Llave: ${key}, Valor: ${value}`);
+            }
+
+            //En los mapas podemos generar llaves que no sean cadenas de texto
+            mapa.set(19,'diecinueve');
+            mapa.set(false,'falso');
+            mapa.set({},{});
+
+            console.log(mapa);
+            for (let [key,value] of mapa) {
+                console.log(`Llave: ${key}, Valor: ${value}`);
+            }
+
+
+            //Otra forma de agregar datos
+            const mapa2 = new Map([
+                ['nombre','Hunter'],
+                ['edad',4],
+                ['animal','perro'],
+                [null,'nulo']
+            ]);
+
+            console.log(mapa2);
+
+            //podemos guardar en un arrreglo toda la lista de llaves
+            //y en otra la lista de valores
+
+            const llavesMapa2 = [...mapa2.keys()];
+            const valoresMapa2 = [...mapa2.values()];
+
+            console.log(llavesMapa2);
+            console.log(valoresMapa2);
+        </script>
+    </body>
+</html>

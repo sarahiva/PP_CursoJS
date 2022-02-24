@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Nuevos Tipos</title>
+    </head>
+    <body>
+        <h1>Nuevos Tipos de Datos en JS</h1>
+        <h2>Proxies</h2>
+        <script>
+            /*Es un nuevo mecanismo de JS que permite crear
+            un obj basado en un obj literal inicial.
+            Ambos mantienen una vinculacion*/
+
+            //obj literal
+            const persona = {
+                nombre: '',
+                apellido: '',
+                edad: 0
+            }
+
+            const manejador = {
+                set(obj,propiedad,valor){
+                    if(Object.keys(obj).indexOf(propiedad) === -1){
+                        return console.error(`La propiedad "${propiedad}" no existe en el obj persona`);
+                    }
+
+                    if(
+                        (propiedad === 'nombre' || propiedad === 'apellido') &&
+                        !(/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g.test(valor))
+                    ){
+                        return console.error(`La propiedad "${propiedad}" solo acepta letras y espacios en blanco`);
+                    }
+                    obj[propiedad] = valor;
+                }
+            }
+            const sara = new Proxy(persona,manejador);
+
+            sara.nombre = 'Sarahi';
+            sara.apellido = 'VA';
+            sara.edad = 22;
+            sara.twitter = 'saraaaa';
+            console.log(sara);
+            console.log(persona);
+        </script>
+    </body>
+</html>

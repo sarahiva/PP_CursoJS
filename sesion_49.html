@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Nuevos Tipos</title>
+    </head>
+    <body>
+        <h1>Nuevos Tipos de Datos en JS</h1>
+        <h2>Symbols</h2>
+        <script>
+            /*Symbol -  es un tipo de dato primitivo
+            Nos permite identificadores de referencia unicos*/
+
+            let id = Symbol('id'),
+            id2 = Symbol('id2');
+
+            console.log(id === id2);
+            console.log(id,id2);
+            console.log(typeof id, typeof id2);
+
+            const NOMBRE = Symbol('nombre');
+            const SALUDAR = Symbol('saludar');
+
+            const persona = {
+                [NOMBRE]: 'Sara',
+                edad: 22
+            };
+            console.log(persona);
+            persona.NOMBRE = 'Sarahi Vazquez';
+            console.log(persona);
+            //Propiedad NOMBRE
+            console.log(persona.NOMBRE);
+            //Symbol
+            console.log(persona[NOMBRE]);
+
+            persona[SALUDAR] = function(){
+                console.log('Hola');
+            }
+
+            console.log(persona);
+            //Ejecutar un metodo declarado como Symbol
+            persona[SALUDAR]();
+
+            for (let propiedad in persona) {
+                console.log(propiedad);
+                console.log(persona[propiedad]);
+            }
+
+            //Para listar los atributos que estan declarados como Symbol
+            console.log(Object.getOwnPropertySymbols(persona));
+        </script>
+    </body>
+</html>
